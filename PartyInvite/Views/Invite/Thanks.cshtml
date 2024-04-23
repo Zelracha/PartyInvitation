@@ -1,0 +1,24 @@
+﻿@model PartyInvite.Models.GuestResponse
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Thank you @Model.Name</title>
+        </head>
+    <body class="text-center">
+        <div>
+            <h1>Thank you, @Model?.Name</h1>
+        @if (Model?.WillAttend == true)
+        {
+            <p>It's great that you're coming.</p>
+        } else
+        {
+            @: Diri adto bay? yawa ka nimo
+        }
+    </div>
+        <div>
+            Click <a class="btn btn-primary " asp-action="GuestList">Here</a> to see the other guest!!
+        </div>
+    </body>
+</html>
